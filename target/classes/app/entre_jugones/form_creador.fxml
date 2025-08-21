@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="formCreadorRoot" prefHeight="342.0" prefWidth="550.0" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.entre_jugones.CreadorController">
+
+    <children>
+
+        <!-- TÍTULO -->
+        <Label fx:id="lblTituloCreador" layoutX="191.0" layoutY="25.0" styleClass="titulo-principal" text="Gestor de Creador" />
+
+        <!-- SEPARADOR -->
+        <Separator id="separatorTituloCreador" layoutX="59.0" layoutY="63.0" prefWidth="440.0" styleClass="separador" />
+
+        <!-- Campo Alias -->
+        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="141.0" prefHeight="19.0" prefWidth="82.0" styleClass="label-campo" text="Alias:" />
+        <TextField fx:id="inputAlias" layoutX="170.0" layoutY="137.0" prefHeight="25.0" prefWidth="301.0" styleClass="campo" />
+
+        <!-- Campo Canal Twitch -->
+        <Label layoutX="70.0" layoutY="188.0" styleClass="label-campo" text="Canal Twitch:" />
+        <TextField fx:id="inputTwitch" layoutX="170.0" layoutY="184.0" prefHeight="25.0" prefWidth="301.0" styleClass="campo" />
+
+        <!-- Botones -->
+        <Button fx:id="btnGuardar" layoutX="38.0" layoutY="239.0" onAction="#onGuardar" styleClass="boton-accion" text="Guardar" />
+
+        <Button fx:id="btnEditar" layoutX="200.0" layoutY="239.0" onAction="#onEditar" styleClass="boton-accion" text="Actualizar" />
+
+        <Button fx:id="btnEliminar" layoutX="363.0" layoutY="239.0" onAction="#onEliminar" styleClass="boton-accion" text="Eliminar" />
+
+        <Button fx:id="btnCancelar" layoutX="200.0" layoutY="294.0" onAction="#onCancelar" prefHeight="27.0" prefWidth="150.0" styleClass="boton-cancelar" text="Cancelar" />
+         <ComboBox fx:id="comboCreadores" layoutX="170.0" layoutY="91.0" onAction="#onSeleccionarCreador" prefHeight="33.0" prefWidth="301.0" styleClass="campo" />
+         <Label layoutX="79.0" layoutY="98.0" styleClass="label-campo" text="Seleccionar:" />
+
+    </children>
+</AnchorPane>
