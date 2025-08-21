@@ -1,0 +1,322 @@
+/* Título principal */
+.titulo-principal {
+    -fx-font-size: 24px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Subtítulo sobre la lista de eventos */
+.subtitulo-eventos {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+}
+
+/* Panel de filtros */
+.panel-filtros {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Panel de detalles */
+.panel-detalles {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Títulos de sección como "Detalles del Creador" */
+.titulo-seccion {
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Etiquetas fijas como "Alias:", "Capítulo:" */
+HBox > Label:first-child {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+/* Texto dinámico como alias, descripción, etc. */
+HBox > Label:last-child {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Lista de eventos */
+.lista-eventos {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-background-color: #ffffff;
+}
+
+/* Botones */
+.boton-acciones,
+.boton-limpiar {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Efecto hover */
+.boton-acciones:hover,
+.boton-limpiar:hover {
+    -fx-background-color: #cccccc;
+}
+
+/* Separadores */
+.separador {
+    -fx-background-color: #cccccc;
+}
+
+/* Campos de texto y datepicker */
+.filtro-textfield,
+.filtro-date {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bbbbbb;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+/* Texto general */
+.label {
+    -fx-font-size: 13px;
+}
+
+
+/* Fondo de la ventana */
+#accionesRoot {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Contenedor principal */
+#accionesContainer {
+    -fx-alignment: center;
+}
+
+/* Cada bloque de acción */
+.bloque-accion {
+    -fx-alignment: center;
+}
+
+/* Título de cada sección */
+.titulo-accion {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+}
+
+/* Botones normales */
+.boton-accion {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-pref-width: 150px;
+    -fx-padding: 5 10;
+}
+
+/* Botón cerrar en rojo */
+.boton-cerrar {
+    -fx-background-color: #ffdddd;
+    -fx-text-fill: #b30000;
+    -fx-border-color: #cc0000;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.boton-cerrar:hover {
+    -fx-background-color: #ffcccc;
+    -fx-cursor: hand;
+}
+
+
+/* Fondo */
+#formEventosRoot {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Título */
+.titulo-principal {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Etiquetas */
+.label-campo {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+/* Separador */
+.separador {
+    -fx-background-color: #cccccc;
+}
+
+/* Campos generales (textos, combobox, datepicker) */
+.campo {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 3 6;
+    -fx-font-size: 12px;
+}
+
+/* Botones de acción (guardar y eliminar) */
+.boton-accion {
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #cccccc;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+/* Botón cancelar en rojo */
+.boton-cancelar {
+    -fx-background-color: #ffdddd;
+    -fx-border-color: #cc0000;
+    -fx-text-fill: #b30000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.boton-cancelar:hover {
+    -fx-background-color: #ffcccc;
+    -fx-cursor: hand;
+}
+
+
+/* Reutilizable */
+#formCreadorRoot {
+    -fx-background-color: #f9f9f9;
+}
+
+.titulo-principal {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.separador {
+    -fx-background-color: #cccccc;
+}
+
+.label-campo {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.campo {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 3 6;
+    -fx-font-size: 12px;
+}
+
+.boton-accion {
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #cccccc;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-cancelar {
+    -fx-background-color: #ffdddd;
+    -fx-border-color: #cc0000;
+    -fx-text-fill: #b30000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.boton-cancelar:hover {
+    -fx-background-color: #ffcccc;
+    -fx-cursor: hand;
+}
+
+
+#formColaboradorRoot {
+    -fx-background-color: #f9f9f9;
+}
+
+.titulo-principal {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.separador {
+    -fx-background-color: #cccccc;
+}
+
+.label-campo {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.campo {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 3 6;
+    -fx-font-size: 12px;
+}
+
+.boton-accion {
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #cccccc;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-cancelar {
+    -fx-background-color: #ffdddd;
+    -fx-border-color: #cc0000;
+    -fx-text-fill: #b30000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.boton-cancelar:hover {
+    -fx-background-color: #ffcccc;
+    -fx-cursor: hand;
+}
+
+
+.copy-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #555555;   /* gris suave */
+    -fx-font-style: italic;
+}

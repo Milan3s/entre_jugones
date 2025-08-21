@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="accionesRoot" prefHeight="390.0" prefWidth="246.0" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.entre_jugones.HomeAccionesController">
+
+    <children>
+        <VBox id="accionesContainer" layoutX="35.0" layoutY="66.0" spacing="25" styleClass="acciones-container">
+
+            <!-- Sección CREADOR -->
+            <VBox spacing="10" styleClass="bloque-accion">
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="177.0" styleClass="titulo-accion" text="Acción sobre el :">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="btnAccionCreador" onAction="#accionCreador" styleClass="boton-accion" stylesheets="@global.css" text="Creador" />
+                </HBox>
+            </VBox>
+
+            <!-- Sección EVENTO -->
+            <VBox spacing="10" styleClass="bloque-accion">
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="177.0" styleClass="titulo-accion" text="Acción sobre el :">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="btnAccionEvento" onAction="#accionEventos" styleClass="boton-accion" stylesheets="@global.css" text="Evento" />
+                </HBox>
+            </VBox>
+
+            <!-- Sección COLABORADOR -->
+            <VBox spacing="10" styleClass="bloque-accion">
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="176.0" styleClass="titulo-accion" text="Acción sobre el :">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="btnAccionColaborador" onAction="#accionColaborador" styleClass="boton-accion" stylesheets="@global.css" text="Colaborador" />
+                </HBox>
+            </VBox>
+
+            <!-- Botón cerrar -->
+            <HBox alignment="CENTER" spacing="10" />
+
+        </VBox>
+      <Text layoutX="61.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestor de Acciones">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+          <Button fx:id="btnCerrar" layoutX="39.0" layoutY="334.0" onAction="#accionCerrar" prefHeight="25.0" prefWidth="176.0" styleClass="boton-cerrar" stylesheets="@global.css" text="Cerrar" />
+      <Separator layoutX="23.0" layoutY="46.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

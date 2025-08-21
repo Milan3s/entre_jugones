@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="rootPane" prefHeight="962.0" prefWidth="1285.0" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.entre_jugones.HomeController">
+
+    <children>
+
+        <!-- BARRA DE MENÚ -->
+        <MenuBar prefWidth="1285.0" styleClass="menu-bar-principal" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+            <menus>
+                <Menu styleClass="menu-submenu" text="Archivo">
+                    <items>
+                        <MenuItem fx:id="menuSalir" onAction="#onMenuSalir" text="Salir" />
+                    </items>
+                </Menu>
+                <Menu styleClass="menu-submenu" text="Ver Licencia">
+                    <items>
+                        <MenuItem fx:id="menuLicencia" onAction="#onMenuLicencia" text="Licencia" />
+                    </items>
+                </Menu>
+                <Menu styleClass="menu-ayuda" text="Ayuda">
+                    <items>
+                        <MenuItem fx:id="menuAcercaDe" onAction="#onMenuAcercaDe" text="Acerca de" />
+                        <MenuItem fx:id="menuRepositorio" onAction="#onMenuRepositorio" text="Repositorio" />                        
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+
+        <!-- TÍTULO -->
+        <Label fx:id="lblTitulo" layoutX="555.0" layoutY="72.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" styleClass="titulo-principal" text="Gestión de Eventos" />
+
+        <!-- LABEL OPCIONES LISTA -->
+        <Label fx:id="lblListaEventos1" layoutX="279.0" layoutY="142.0" styleClass="subtitulo-eventos" text="Lista de opciones" />
+
+        <!-- SEPARADOR SUPERIOR -->
+        <Separator layoutX="133.0" layoutY="121.0" prefHeight="3.0" prefWidth="1049.0" styleClass="separador" />
+
+        <!-- FILTROS -->
+        <VBox layoutX="121.0" layoutY="167.0" spacing="10" styleClass="panel-filtros">
+            <HBox spacing="5">
+                <Label prefHeight="26.0" prefWidth="100" text="Por fecha:" />
+                <DatePicker fx:id="dateFiltroEvento" prefHeight="25.0" prefWidth="324.0" promptText="dd-MM-yyyy" />
+            </HBox>
+            <HBox spacing="5">
+                <Label prefHeight="31.0" prefWidth="100" text="Buscar evento:" />
+                <TextField fx:id="inputBuscarEvento" prefHeight="30.0" prefWidth="250" promptText="Nombre o descripción" />
+                <Button fx:id="btnLimpiarFiltros" onAction="#onLimpiarFiltros" styleClass="boton-limpiar" text="Limpiar" />
+            </HBox>
+        </VBox>
+
+        <!-- LISTA DE EVENTOS -->
+        <Label fx:id="lblListaEventos" layoutX="282.0" layoutY="285.0" styleClass="subtitulo-eventos" text="Lista de Eventos" />
+        <ListView fx:id="listEventos" layoutX="121.0" layoutY="311.0" prefHeight="500.0" prefWidth="420.0" styleClass="lista-eventos" />
+
+        <!-- PANEL DE DETALLES -->
+        <VBox layoutX="582.0" layoutY="311.0" prefHeight="500.0" prefWidth="600.0" spacing="12" styleClass="panel-detalles">
+
+            <!-- CREATOR -->
+            <Label style="-fx-font-weight: bold; -fx-underline: true;" text="Detalles del Creador:" />
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Alias:" />
+                <Label fx:id="lblAlias" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Canal Twitch:" />
+                <Label fx:id="lblTwitch" text="—" />
+            </HBox>
+
+            <Separator />
+
+            <!-- EVENTO -->
+            <Label style="-fx-font-weight: bold; -fx-underline: true;" text="Evento asignado:" />
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Nombre evento:" />
+                <Label fx:id="lblNombreEvento" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Capítulo:" />
+                <Label fx:id="lblNombreCapitulo" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Descripción:" />
+                <Label fx:id="lblDescripcionEvento" prefWidth="400" text="—" wrapText="true" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Fecha inicio:" />
+                <Label fx:id="lblFechaInicio" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Hora inicio:" />
+                <Label fx:id="lblHoraInicio" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Fecha fin:" />
+                <Label fx:id="lblFechaFin" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Hora fin:" />
+                <Label fx:id="lblHoraFin" text="—" />
+            </HBox>
+
+            <Separator />
+
+            <!-- COLABORADOR -->
+            <Label style="-fx-font-weight: bold; -fx-underline: true;" text="Detalles del Colaborador:" />
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Alias:" />
+                <Label fx:id="lblNombreColaborador" text="—" />
+            </HBox>
+            <HBox spacing="10">
+                <Label prefWidth="120" text="Canal Twitch:" />
+                <Label fx:id="lblTwitchColaborador" text="—" />
+            </HBox>
+        </VBox>
+
+        <!-- BOTÓN CERRAR -->
+        <Button fx:id="btnCerrar" layoutX="563.0" layoutY="843.0" onAction="#accionCerrar" prefHeight="40.0" prefWidth="160.0" styleClass="boton-cerrar" text="Cerrar" />
+
+        <!-- COPYRIGHT -->
+        <Label alignment="CENTER" layoutX="515.0" layoutY="895.0" prefHeight="38.0" prefWidth="250.0" styleClass="copy-label" text="© Desarrollado por Soujirito" textAlignment="CENTER" />
+      <Button fx:id="btnAcciones" layoutX="582.0" layoutY="268.0" mnemonicParsing="false" onAction="#accionAcciones" prefHeight="30.0" prefWidth="100.0" styleClass="boton-accion" text="Acciones" />
+    </children>
+</AnchorPane>
